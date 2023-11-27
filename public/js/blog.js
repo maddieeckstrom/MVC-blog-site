@@ -9,7 +9,7 @@ const mailHandler = async (event) => {
         return;
       }
 
-      const response = await fetch(`/api/recipes/email`, {
+      const response = await fetch(`/api/blogs/email`, {
         method: 'POST',
         body: JSON.stringify({ description, toEmail }),
         headers: {

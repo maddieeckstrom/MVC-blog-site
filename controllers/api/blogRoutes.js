@@ -1,28 +1,15 @@
 const router = require('express').Router();
-const { Recipe } = require('../../models');
+const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
-const nodemailer = require("nodemailer");
-
-// const mailUser = process.env.mailUser;  Next version: Use .env or similar solution for secure auth.
-// const mailPass = process.env.mailPass;
-
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  auth: {
-      user: 'tonymagrady@gmail.com',
-      pass: 'lqdywchghygtefxw'
-  }
-});
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newRecipe = await Recipe.create({
+    const newBlog = await Blog.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newRecipe);
+    res.status(200).json(newBlog);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -30,19 +17,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const recipeData = await Recipe.destroy({
+    const blogData = await Blog.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!recipeData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    if (!blogData) {
+      res.status(404).json({ message: 'No blog found with this id!' });
       return;
     }
 
-    res.status(200).json(recipeData);
+    res.status(200).json(blogData);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -55,7 +42,7 @@ router.post('/email', withAuth, async (req, res) => {
   const info = await transporter.sendMail({
     from: '"Fred Foo 👻" <foo@example.com>', // sender address
     to: req.body.toEmail,
-    subject: "Recipe Description",    // Subject line
+    subject: "Blog Description",    // Subject line
     text: `${req.body.description}`,  // plain text body
     html: `${req.body.description}`,  // html body
   });

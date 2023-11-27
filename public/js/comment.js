@@ -2,20 +2,20 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     const commentBody = document.querySelector('#comment-body').value.trim();
-    const recipeId = document.querySelector('#recipe-id').value.trim();
+    const blogId = document.querySelector('#blog-id').value.trim();
   
     if (commentBody) {
         console.log('hello')
       const response = await fetch(`/api/comments`, {
         method: 'POST',
-        body: JSON.stringify({ body: commentBody, recipe_id: recipeId }),
+        body: JSON.stringify({ body: commentBody, blog_id: blogId }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace(`/recipes/${recipeId}`);
+        document.location.replace(`/blogs/${blogId}`);
       } else {
         alert('Failed to create comment');
       }

@@ -1,5 +1,5 @@
 <div class="card charlie">
-<div class="card-body text-center recipe-details">
+<div class="card-body text-center blog-details">
   <h2 class="card-title juliette">{{name}}</h2>
   <p class="card-text">{{ingredients}}</p>
   <p class="card-text">{{description}}</p>
@@ -8,18 +8,8 @@
 </div>
 </div>
 
-  <form class="form input-form share-recipe" data-desc="{{ description }}">
-    <div class="form-group">
-      <label class="p-text-size" for="input-email">With whom do you want to share this recipe? Enter their email address and click Share Recipe:</label>
-      <input class="form-input w-50" type="text" id="input-email"/>
-      <p>
-        <button class="btn echo" id="mail-button">Share Recipe</button>
-      </p>
-    </div>
-  </form>
-
 <form class="form new-comment-form">
-  <input type="hidden" value="{{id}}" id="recipe-id" name="recipe-id"/>
+  <input type="hidden" value="{{id}}" id="blog-id" name="blog-id"/>
   <div class="form-group">
     <label for="comment-body" class="alpha fs-4 text fw-medium">Add comment:</label>
     <textarea class="delta" id="comment-body" name="comment-body"></textarea>
@@ -49,5 +39,5 @@
 </div>
 {{/if}}
 
-<script src="/js/recipe.js"></script>
+<script src="/js/blog.js"></script>
 <script src="/js/comment.js"></script>
