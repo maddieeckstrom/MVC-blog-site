@@ -1,0 +1,96 @@
+header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+.alpha {
+  color: rgb(139, 64, 0);
+  text-decoration: none;
+}
+
+.beta {
+  color: rgb(139, 64, 0);
+  background-color: rgb(250, 213, 165);
+}
+
+.charlie {
+  color: rgb(139, 64, 0);
+  border-style: solid;
+  border-width: 1rem;
+  border-color: rgb(250, 213, 165);
+  height: 100%;
+  text-align: center;
+}
+
+.delta {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.625rem 0;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  border-style: solid;
+  border-width: .2rem;
+  border-color: rgb(250, 213, 165);
+}
+
+.echo {
+  background-color: rgb(139, 64, 0);
+  color: #ffffff;
+}
+
+.foxtrot {
+  text-decoration: none;
+  color: black;
+}
+
+.golf {
+  float: right;
+}
+
+.hotel {
+  justify-content: center;
+}
+
+.indigo {
+  background-color: rgb(250, 249, 246);
+}
+
+.juliette {
+  margin-bottom: 0.625rem;
+}
+
+#input-email {
+  display: block;
+  margin: 0px auto 10px auto;
+}
+
+.p-text-size {
+  font-size: 1.1rem;
+}
+
+.share-recipe {
+  color: rgb(139, 64, 0);
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}
