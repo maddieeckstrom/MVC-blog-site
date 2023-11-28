@@ -24,20 +24,20 @@ header, .project:not(:last-child) {
 }
 
 .alpha {
-  color: rgb(139, 64, 0);
+  color: #247291;
   text-decoration: none;
 }
 
 .beta {
-  color: rgb(139, 64, 0);
-  background-color: rgb(250, 213, 165);
+  color: #247291;
+  background-color: #f8da5b;
 }
 
 .charlie {
-  color: rgb(139, 64, 0);
+  color: #247291;;
   border-style: solid;
-  border-width: 1rem;
-  border-color: rgb(250, 213, 165);
+  border-width: .5rem;
+  border-color: #f8da5b;
   height: 100%;
   text-align: center;
 }
@@ -50,12 +50,12 @@ header, .project:not(:last-child) {
   border-radius: 0.3rem;
   border-style: solid;
   border-width: .2rem;
-  border-color: rgb(250, 213, 165);
+  border-color: #f8da5b;
 }
 
 .echo {
-  background-color: rgb(139, 64, 0);
-  color: #ffffff;
+  background-color: #247291;
+  color: #f5f9ee;
 }
 
 .foxtrot {
@@ -72,7 +72,7 @@ header, .project:not(:last-child) {
 }
 
 .indigo {
-  background-color: rgb(250, 249, 246);
+  background-color: #eef2e2;
 }
 
 .juliette {
