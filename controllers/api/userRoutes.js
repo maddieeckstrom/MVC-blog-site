@@ -39,12 +39,6 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    if (!password.length) {
-      res
-      .status(400)
-      .json({message: 'Please have at least 8 characters in length'})
-    }
-
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;

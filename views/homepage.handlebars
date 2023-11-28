@@ -1,20 +1,20 @@
-<!-- Loop over each object in the blog array -->
+<!-- Loop over each object in the recipes array -->
 <div class="row row-cols-1 row-cols-sm-3 g-2">
-{{#each blogs as |blog| }}
+{{#each recipes as |recipe| }}
 <div id="cards" class="col mb-4 project">
   <div class="card p-2 charlie">
   <div>
     <h2 class="card-title">
-      <a class="alpha" href="/blogs/{{blog.id}}">{{blog.name}}</a>
+      <a class="alpha" href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
     </h2>
-    <p class="card-subtitle fw-light">Created by {{blog.user.name}} on {{format_date blog.date_created}}</p>
+    <p class="card-subtitle fw-light">Created by {{recipe.user.name}} on {{format_date recipe.date_created}}</p>
   </div>
   <div>
     <p class="card-text my-4">
-      {{blog.ingredients}}
+      {{recipe.ingredients}}
     </p>
     <p class="card-text my-4">
-      {{blog.description}}
+      {{recipe.description}}
     </p>
   </div>
   </div>

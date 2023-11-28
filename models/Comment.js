@@ -26,10 +26,10 @@ Comment.init(
           key: 'id',
         },
       },
-      blog_id: {
+      recipe_id: {
         type: DataTypes.UUID,
         references: {
-          model: 'blog',
+          model: 'recipe',
           key: 'id',
         },
 

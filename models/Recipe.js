@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Blog extends Model {}
+class Recipe extends Model {}
 
-Blog.init(
+Recipe.init(
   {
     id: {
       type: DataTypes.UUID,
@@ -39,8 +39,8 @@ Blog.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blog',
+    modelName: 'recipe',
   }
 );
 
-module.exports = Blog;
+module.exports = Recipe;
