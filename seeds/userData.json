@@ -1,17 +1,17 @@
 [
   {
-    "name": "Sol",
-    "email": "sol@email.com",
+    "name": "anonymousUser",
+    "email": "1@email.com",
     "password": "Password12345!"
   },
   {
-    "name": "Tabbatha",
-    "email": "tabbatha@email.com",
+    "name": "blog lover",
+    "email": "2@email.com",
     "password": "Password12345!"
   },
   {
-    "name": "Tony",
-    "email": "tony@email.com",
+    "name": "personX",
+    "email": "3.com",
     "password": "Password12345!"
   }
 ]
